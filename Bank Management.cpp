@@ -25,39 +25,39 @@ public:
 
 void account::create_account()
 {
-	cout<<"\nEnter The account No. :";
+	cout<<"Enter The account No. :"<<endl;
 	cin>>acno;
-	cout<<"\n\nEnter The Name of The account Holder : ";
+	cout<<Enter The Name of The account Holder : "<<endl;
 	cin.ignore();
-	cin.getline(name,50);
-	cout<<"\nEnter Type of The account (C/S) : ";
+	cin.getline(name,90);
+	cout<<"Enter Type of The account (C/S) : "<<endl;
 	cin>>type;
 	type=toupper(type);
-	cout<<"\nEnter The Initial amount(>=500 for Saving and >=1000 for current ) : ";
+	cout<<"Enter The Initial amount(>=500 for Saving and >=1000 for current ) : "<<endl;
 	cin>>deposit;
-	cout<<"\n\n\nAccount Created..";
+	cout<<"Account Created.."<<endl;
 }
 
 void account::show_account() const
 {
-	cout<<"\nAccount No. : "<<acno;
+	cout<<"\nAccount No. : "<<acno<<endl;
 	cout<<"\nAccount Holder Name : ";
 	cout<<name;
-	cout<<"\nType of Account : "<<type;
-	cout<<"\nBalance amount : "<<deposit;
+	cout<<"Type of Account : "<<type<<endl;
+	cout<<"Balance amount : "<<deposit<<endl;
 }
 
 
 void account::modify()
 {
-	cout<<"\nAccount No. : "<<acno;
-	cout<<"\nModify Account Holder Name : ";
+	cout<<Account No. : "<<acno<<endl;
+	cout<<Modify Account Holder Name : "<<endl;
 	cin.ignore();
 	cin.getline(name,50);
-	cout<<"\nModify Type of Account : ";
+	cout<<Modify Type of Account : "<<endl;
 	cin>>type;
 	type=toupper(type);
-	cout<<"\nModify Balance amount : ";
+	cout<<Modify Balance amount : "<<endl;
 	cin>>deposit;
 }
 
@@ -239,7 +239,7 @@ void delete_account(int n)
 	inFile.open("account.dat",ios::binary);
 	if(!inFile)
 	{
-		cout<<"File could not be open !! Press any Key...";
+		cout<<"File can not be open. Press any Key...";
 		return;
 	}
 	outFile.open("Temp.dat",ios::binary);
